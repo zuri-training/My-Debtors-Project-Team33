@@ -1,3 +1,5 @@
+import email
+from statistics import mode
 from django.db import models
 
 
@@ -32,4 +34,14 @@ class Student(models.Model):
 
 
 class Comment(models.Model):
-  text = models.TextField(max_length=100)
+  student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='comments')
+  name = models.CharField(max_length=80)
+  email = models.EmailField()
+  body = models.TextField(max_length=100)
+  created_on = models.DateTimeField(auto_now_add=True)
+
+  class Meta:
+      ordering = ['created_on']
+
+  def __str__(self):
+    return 'Comment {} by {}'.format(self.body, self.name)
