@@ -1,0 +1,6 @@
+asgiref==3.5.2
+attrs==22.1.0
+Django==4.0
+django-schema-graph==1.2.0
+sqlparse==0.4.2
+tzdata==2022.1

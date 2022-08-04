@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    font-family: 'Montserrat', sans-serif!important;
+    width: 100%;
+    height: 1024px;
+    padding: 0;
+    margin: 0;
+    background: #FFFFFF;
+}
+
+header {
+    padding: 35px 47px 24px 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/*sidebar harmburger menu*/
+.sidebar_hamburger_menu {
+    width: 30px;
+    height: 20px;
+    margin-right: 15px;
+    right: 5px;
+    top: 20px;
+    cursor: pointer;
+}
+.sidebar_hamburger_menu span {
+    width: 30px;
+    height: 5px;
+    margin-bottom: 3px;
+    background-color: #121212;
+    display: block;
+    opacity: .5;
+}
+
+.notifications {
+    width: 350px;
+    height: 500px;
+    padding: 35px;
+    background: linear-gradient(113.99deg, rgba(255, 255, 255, 0.6) 2.94%, rgba(255, 255, 255, 0.5) 89.98%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 32px;
+    z-index: 200;
+    position: absolute;
+    right: 172px;
+    top: 106px;
+    display: none;
+}
+
+.notifications h6 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.notifications button {
+    margin-top: 13px;
+    font-size: 20px;
+    line-height: 24px;
+    background-color: inherit;
+    color: #FFFFFF;
+    border: none;
+}
+.notifi-box {
+    width: 100%;
+    margin-top: 25px;
+    overflow: auto;
+}
+.notifi-avatar:not(:first-child) {
+    height: 70px;
+    margin: 0;
+}
+.notifi-avatar img {
+    width: 100%;
+}
+.notifi-message {
+    width: 80%;
+    padding-left: 10px;
+}
+.notifi-message p {
+    margin: 0;
+    color: #787878;
+}
+.notifi-message span {
+    color: #00659F;;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+}
+.nav .nav-icons {
+    width: 32px;
+    height: 32px;
+    margin-right: 23px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/*dashboard body*/
+.dashboard_body {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    
+}
+.open_sidebar {
+    width: 15%;
+    padding: 39px 35px 35px;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    
+}
+
+
+
+.open_sidebar .sidebar_icon:not(:first-child) {
+    display: block;
+    margin-top: 50px;
+    padding: 3px;
+}
+
+.sidebar_icon svg:hover g {
+    opacity: 1;
+}
+
+.sidebar_icon svg:hover circle {
+    stroke: #00659F;
+    stroke-opacity: 1;
+}
+.sidebar_icon svg:hover path {
+    stroke: #00659F;
+    stroke-width: 0.5;
+    fill: #00659F;
+    opacity: 1;
+}
+.sidebar_icon svg:hover g path {
+    stroke: #fff;
+    
+}
+
+
+.main_content_area {
+    width: 85%;
+    padding-bottom: 35px;
+    background-color: #CCE0EC;
+    position: relative;
+}
+.reduce {
+    width: 100%;
+}
+.main_content_area_overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #0B0B0B;
+    opacity: .3;
+}
+
+.stats_box_area,
+.charts_box_area {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.charts_box_area {
+    padding-top: 80px;
+}
+.stat {
+    width: 22%;
+    height: 180px;
+    padding-top: 27px;
+    border-radius: 32px;
+    box-shadow: 2px 4px 20px 2px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255);
+    text-align: center;
+}
+.stat_heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.stat_heading .stat_text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #00659F;
+    display: inline-block;
+}
+.stat_number {
+    margin-top: 2px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    color: #CF3B3D;
+}
+.stat_btn {
+    width: auto;
+    margin-top: 20px;
+    padding: 5px 10px;
+    background: #00659F;
+    border: none;
+    border-radius: 16px;
+    color: #FFFFFF;
+}
+
+.chart {
+    width: 44%;
+    height: 360px;
+    border-radius: 32px;
+    box-shadow: 2px 4px 20px 2px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255);
+    text-align: center;
+}
+.chart h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #CF3B3D; 
+}
+.chart img {
+    width: 90%;
+}
+
+.contention_area {
+    display: flex;
+    justify-content: center;
+}
+
+.pending_contentions {
+    width: 60%;
+    height: 360px;
+    margin-top: 80px;
+    padding: 0 30px;
+    border-radius: 32px;
+    box-shadow: 2px 4px 20px 2px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255);
+    text-align: center;
+}
+.pending_contentions h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #CF3B3D;
+}
+
+/*Styles for table of debtors list*/
+.pending_contentions div {
+    width: 100%;
+    display: block;
+    overflow: auto;
+    height: 220px;
+}
+.debtors_list {
+    width: 100%;
+    
+     
+}
+.debtor_info {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+.debtor_avatar {
+    width: 17%;
+}
+.debtor_avatar img {
+    width: 60%;
+}
+.debtor_name {
+    width: 65%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.debtor_name p {
+    margin: 0;
+    font-family: 'Work Sans';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #003844;
+}
+.debtor_class {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #003844;   
+}
+.debtor_link {
+    width: 15%;
+    margin-right: 5px;
+}
+.debtor_link a {
+    padding: 8px 18px;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #00659F;
+    border-radius: 8px;
+    display: block;
+}
+
+
+/*Media Query*/
+@media screen and (max-width: 768px) {
+    .open_sidebar {
+        width: 25%;        
+    }
+    .main_content_area {
+        width: 75%;
+    }
+    .reduce {
+        width: 100%;
+    }
+    .stats_box_area,
+    .charts_box_area {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .stat {
+        width: 90%;
+        margin-top: 30px;
+    }
+    .chart {
+        width: 90%;
+        height: 478px;
+        margin-bottom: 30px;
+    }
+    .pending_contentions {
+        width: 90%;
+        height: 500px;
+    }
+    .pending_contentions div {
+        height: 343px;
+    }
+}

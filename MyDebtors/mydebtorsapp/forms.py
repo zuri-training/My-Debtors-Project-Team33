@@ -1,6 +1,4 @@
-from pyexpat import model
 
-from attr import fields
 from .models import Comment, Student, School
 from django import forms
 
@@ -12,8 +10,12 @@ class CommentForm(forms.ModelForm):
 
 
 # Student form
-
-
+class StudentForm(forms.ModelForm):
+      class Meta:
+            model = Student
+            fields = ('first_name', 'last_name', 'parent_name', 
+                      'parent_email', 'parent_phone_no', 'address', 
+                      'location', 'admission_no', 'fees_owed', 'last_school')
 
 
 # School form
