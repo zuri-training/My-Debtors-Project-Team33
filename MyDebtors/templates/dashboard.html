@@ -1,11 +1,24 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard.css">
-    <title>Dashboard | Notify</title>
+    <!-- <link rel="stylesheet" href="dashboard.css"> -->
+    <!-- <title>Dashboard | Notify</title> -->
+    <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'aboutus.css' %}">
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'signin.css' %}">
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+
+    <title>
+        {% block title %}
+            Dashboard | Notify
+        {% endblock%}
+    </title>
+
 </head>
 <body>
     <header>
@@ -16,13 +29,13 @@
                 <span></span>
             </div>
             <a href="#">
-                <img src="img/logo.png" alt="Notify Logo">
+                <img src="{% static 'logo.png'%}" alt="Notify Logo">
             </a>
         </div>
         <nav class="nav">
-            <div class="nav-icons user-notifications" id="notifi-icon"><img src="img/Bell_pin.png" alt=""></div>
-            <div class="nav-icons user-settings"><img src="img/Setting_line.png" alt=""></div>
-            <div class="nav-icons user-avatar" id="user-profile"><img src="img/User_box.png" alt=""></div>
+            <div class="nav-icons user-notifications" id="notifi-icon"><img src="{% static 'Bell_pin.png' %}" alt=""></div>
+            <div class="nav-icons user-settings"><img src="{% static 'Setting_line.png' %}" alt=""></div>
+            <div class="nav-icons user-avatar" id="user-profile"><img src="{% static 'User_box.png' %}" alt=""></div>
         </nav>
         <div class="notifications" id="notifications">
             <h6>Notifications</h6>
@@ -30,7 +43,7 @@
             <div class="notifi-box">
                 <table>
                     <tr class="notifi-avatar">
-                        <td><img src="img/Ellipse 86.png" alt=""></td>
+                        <td><img src="{% static 'Ellipse-86.png' %}" alt=""></td>
                         <td class="notifi-message">
                             <p>Seth Cartel Junior and Senior Secondary School</p>
                             <span class="report"></span>
@@ -38,7 +51,7 @@
                         </td>
                     </tr>
                     <tr class="notifi-avatar">
-                        <td><img src="img/Ellipse 86.png" alt=""></td>
+                        <td><img src="{% static 'Ellipse-86.png' %}" alt=""></td>
                         <td class="notifi-message">
                             <p>Seth Cartel Junior and Senior Secondary School</p>
                             <span class="report"></span>
@@ -97,13 +110,13 @@
             <!--<div class="main_content_area_overlay"></div> -->
             <div class="stats_box_area">
                 <div class="stat posts">
-                    <div class="stat_heading"><img src="img/ic_sharp-post-add.png" alt=""> <span class="stat_text">Posts</span></div>
+                    <div class="stat_heading"><img src="{% static 'ic_sharp-post-add.png' %}" alt=""> <span class="stat_text">Posts</span></div>
                     <div class="stat_number">70</div>
                     <button class="stat_btn">View all</button>
                     
                 </div>
                 <div class="stat new_uploads">
-                    <div class="stat_heading"><img src="img/bxs_cloud-upload.png" alt=""> <span class="stat_text">New Uploads</span></div>
+                    <div class="stat_heading"><img src="{% static 'bxs_cloud-upload.png' %}" alt=""> <span class="stat_text">New Uploads</span></div>
                     <div class="stat_number">50</div>
                     <button class="stat_btn">View all</button>
                 </div>
@@ -121,7 +134,7 @@
             <div class="charts_box_area">
                 <div class="chart">
                     <h5>Chart of Non-debtors Rate</h5>
-                    <img src="img/Group 8.png" alt="">
+                    <img src="{% static 'Group-8.png' %}" alt="">
                 </div>
                 <div class="chart">
                     <h5>Chart of Debtors Rate</h5>
@@ -133,29 +146,29 @@
                     <div>
                         <table class="debtors_list">
                             <tr class="debtor_info">
-                                <td class="debtor_avatar"><img src="img/debtor_avatar.png" alt=""></td>
+                                <td class="debtor_avatar"><img src="{% static 'debtor_avatar.png' %}" alt=""></td>
                                 <td class="debtor_name"><p>John Paul</p> <span class="debtor_class">SSS 1A</span></td>
                                 <td class="debtor_link"><a href="#">View</a></td>
                             </tr>
     
                             <!-- More dummy data-->
                             <tr class="debtor_info">
-                                <td class="debtor_avatar"><img src="img/debtor_avatar.png" alt=""></td>
+                                <td class="debtor_avatar"><img src="{% static 'debtor_avatar.png' %}" alt=""></td>
                                 <td class="debtor_name"><p>John Paul</p> <span class="debtor_class">SSS 1A</span></td>
                                 <td class="debtor_link"><a href="#">View</a></td>
                             </tr>
                             <tr class="debtor_info">
-                                <td class="debtor_avatar"><img src="img/debtor_avatar.png" alt=""></td>
+                                <td class="debtor_avatar"><img src="{% static 'debtor_avatar.png' %}" alt=""></td>
                                 <td class="debtor_name"><p>John Paul</p> <span class="debtor_class">SSS 1A</span></td>
                                 <td class="debtor_link"><a href="#">View</a></td>
                             </tr>
                             <tr class="debtor_info">
-                                <td class="debtor_avatar"><img src="img/debtor_avatar.png" alt=""></td>
+                                <td class="debtor_avatar"><img src="{% static 'debtor_avatar.png' %}" alt=""></td>
                                 <td class="debtor_name"><p>John Paul</p> <span class="debtor_class">SSS 1A</span></td>
                                 <td class="debtor_link"><a href="#">View</a></td>
                             </tr>
                             <tr class="debtor_info">
-                                <td class="debtor_avatar"><img src="img/debtor_avatar.png" alt=""></td>
+                                <td class="debtor_avatar"><img src="{% static 'debtor_avatar.png' %}" alt=""></td>
                                 <td class="debtor_name"><p>John Paul</p> <span class="debtor_class">SSS 1A</span></td>
                                 <td class="debtor_link"><a href="#">View</a></td>
                             </tr>
@@ -168,6 +181,6 @@
         </section>
     </main>
     
-    <script src="dashboard.js"></script>
+    <script src="{% static 'dashboard.js' %}"></script>
 </body>
 </html>
