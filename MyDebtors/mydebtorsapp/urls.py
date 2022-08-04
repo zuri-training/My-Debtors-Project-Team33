@@ -6,5 +6,6 @@ from .views import HomeView
 
 urlpatterns = [
   path("Schema/", Schema.as_view()),
-  path("", HomeView.as_view(), name='home')
+  path("", HomeView.as_view(), name='home'),
+  # path("", PostView.as_view(), name='posts'),
 ]
