@@ -110,6 +110,9 @@ header {
 .mobile-menu .sign-in-btn {
     color: #2B7FAF;
 }
+.mobile-menu .sign-up-btn {
+    color: #fff;
+}
 
 
 /*Media query*/
