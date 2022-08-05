@@ -1,49 +1,54 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="navbar.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div class="logo_box">
-        <a href="#">
-          <img src="{% static 'logo.png'%}" alt="Notify logo" />
-        </a>
-      </div>
-      <div class="desktop_menu">
-        <div class="mobile-nav_links">
-          <a href="#">Home</a>
-          <a href="#">Blog</a>
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
+        <div class="logo_box">
+            <a href="#">
+                <img src="{% static 'logo.png' %}" alt="Notify logo">
+            </a>  
         </div>
-        <div class="mobile_nav_buttons">
-          <a href="#" class="btn_navbar sign-in-btn">Sign In</a>
-          <a href="#" class="btn_navbar sign-up-btn">Sign Up</a>
+        <div class="desktop_menu">
+            <div class="desktop_nav_links">
+                <a href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="desktop_nav_buttons">
+                <a href="{% url 'login' %}" class="btn_navbar sign-in-btn">Sign In</a>
+                <a href="{% url 'register' %}" class="btn_navbar sign-up-btn">Sign Up</a>
+            </div>
         </div>
-      </div>
-      <div class="sidebar_hamburger_menu" id="harmburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav class="mobile-menu">
-        <div>
-          <a href="#">Home</a>
-          <a href="#">Blog</a>
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
+        <div class="sidebar_hamburger_menu" id="harmburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+        <nav class="mobile-menu" id="mobile-menu">
+            <div>
+                <a href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </div>
+                
 
-        <div class="nav_buttons">
-          <a href="#" class="btn_navbar sign-in-btn">Sign In</a>
-          <a href="#" class="btn_navbar sign-up-btn">Sign Up</a>
-        </div>
-      </nav>
+                <div class="nav_buttons">
+                    <a href="#" class="btn_navbar sign-in-btn">Sign In</a>
+                    <a href="#" class="btn_navbar sign-up-btn">Sign Up</a>
+                </div>
+        </nav>        
     </header>
-  </body>
+
+
+    <script src="{% static 'navbar.js' %}"></script>
+</body>
 </html>

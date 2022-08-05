@@ -15,7 +15,7 @@
     />
     <!-- STYLESHEET -->
     <!-- <link rel="stylesheet" href="style.css" /> -->
-    <link rel="stylesheet" href="{% static 'signin.css' %}" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
     <title>Sign in page</title>
   </head>
   <body>
@@ -42,7 +42,7 @@
             <!-- email form -->
             <!-- <form action="" class="Email-form">
               <label for="email">Email Address
-                <input type="email" placeholder="emailaddress .com" size="50" required>
+                <input type="username" placeholder="emailaddress .com" size="50" required>
                 </label>
                 <label for="password">Password
                 <input type="password" placeholder="***********" class="pass" size="50" required>
@@ -61,7 +61,7 @@
               {{ form.as_p }}
               <button class="btn">Log in</button>
             </form>
-            <img src="./Images/undraw_my_password_re_ydq7.svg" alt="undraw" class="svg">
+            <img src="{% static 'undraw_my_password_re_ydq7.svg' %}" alt="undraw" class="svg">
         </div>
        </section> 
     </main>

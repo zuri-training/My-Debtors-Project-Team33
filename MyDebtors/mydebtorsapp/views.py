@@ -15,10 +15,21 @@ from django.http import HttpResponseRedirect
 # Homepage View
 class HomeView(ListView):
   model = School
+  template_name = 'navbar.html'
+
+  # def get_context_data(self, *args, **kwargs):
+  #   school_list = School.objects.all()
+  #   context = super(HomeView, self).get_context_data(*args, **kwargs)
+  #   context["school_list"] = school_list
+  #   return context
+
+  
+class DashboardView(ListView):
+  model = Student
   template_name = 'dashboard.html'
 
-  def get_context_data(self, *args, **kwargs):
-    school_list = School.objects.all()
-    context = super(HomeView, self).get_context_data(*args, **kwargs)
-    context["school_list"] = school_list
-    return context
+  # def get_context_data(self, *args, **kwargs):
+  #   school_list = School.objects.all()
+  #   context = super(HomeView, self).get_context_data(*args, **kwargs)
+  #   context["school_list"] = school_list
+  #   return context

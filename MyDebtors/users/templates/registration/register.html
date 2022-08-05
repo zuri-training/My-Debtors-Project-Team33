@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,12 +9,12 @@
     <!-- <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
      -->
     <!-- GOOGLE FONT -->
-    <!-- <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
-    /> -->
+    />
     <!-- STYLESHEET -->
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
     <title>SignUp page</title>
   </head>
   <body>
@@ -32,7 +33,7 @@
             </div>
             <!-- google button  -->
             <div class="google-button">
-                <img src="./Images/icons8-google-48.png" alt="">
+                <img src="{% static 'icons8-google-48.png' %}" alt="">
                 <a href="#">Sign up with google</a>
             </div>
             <div class="alternative">
@@ -58,7 +59,7 @@
               {{ form.as_p }}
               <button>Register</button>
             </form>
-            <img src="./Images/undraw_my_password_re_ydq7.svg" alt="undraw" class="svg">
+            <img src="{% static 'undraw_my_password_re_ydq7.svg' %}" alt="undraw" class="svg">
         </div>
        </section> 
     </main>

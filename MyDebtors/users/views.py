@@ -10,7 +10,7 @@ class UserRegisterView(generic.CreateView):
     # form_class = UserCreationForm
     form_class = SignUpForm
     template_name = 'registration/register.html'
-    success_url = reverse_lazy('login')  # Send to login once registered or to home
+    success_url = reverse_lazy('home')  # Send to login once registered or to home
 
 
 class UserEditView(generic.UpdateView):
