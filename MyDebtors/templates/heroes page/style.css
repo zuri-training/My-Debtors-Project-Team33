@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(bg-img.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container-one {
+  color: white;
+  margin-left: 50px;
+}
+
+#text-one {
+  font-size: 6.6vw;
+  font-weight: 900;
+  text-align: left;
+  margin-top: 120px;
+}
+
+#text-two {
+  font-size: 4.3vw;
+  font-weight: 900;
+  text-align: left;
+}
+
+button {
+  min-width: 250px;
+  background-color: #2b7faf;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-size: larger;
+  padding-bottom: 20px;
+}
+
+img {
+  height: 30px;
+  position: relative;
+  top: 10px;
+  left: 15px;
+}
+
+@media only screen and (min-width: 1200px) {
+  #text-two {
+    font-size: 3vw;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  #text-one {
+    font-size: 5vw;
+    font-weight: 900;
+    text-align: left;
+    margin-top: 120px;
+  }
+}
