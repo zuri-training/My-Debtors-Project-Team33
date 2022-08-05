@@ -4,6 +4,7 @@ body {
 header {
     padding: 35px 30px 24px 30px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,16 +17,16 @@ header {
 .logo_box img {
     height: 100%;
 }
-nav {
+.desktop_menu {
     height: 32px;
     display: flex;
     flex-wrap: wrap;
 }
-.nav_links {
+.desktop_nav_links {
     height: 100%;
     margin-right: 2rem;
 }
-.nav_links a {
+.desktop_nav_links a {
     margin-right: 1rem;
     padding: 0.5rem 0.3rem;
     font-weight: 500;
@@ -34,16 +35,16 @@ nav {
     text-decoration: none;
     color: #000;
 }
-.nav_links a:hover {
+.desktop_nav_links a:hover {
     color: #2B7FAF;
 }
-.nav_buttons {
+.desktop_nav_buttons {
     height: 100%;
     margin-right: 2rem;
     display: flex;
     align-items: center;
 }
-.nav_buttons .btn_navbar {
+.desktop_nav_buttons .btn_navbar {
     padding: 14px 17px;
     text-decoration: none;
     display: block;   
@@ -78,31 +79,40 @@ nav {
 }
 .mobile-menu {
     width: 300px;
-    height: 600px;
+    padding: 1rem auto auto 2rem;
     background: linear-gradient(113.99deg, rgba(255, 255, 255, 0.6) 2.94%, rgba(255, 255, 255, 0.5) 89.98%);
     box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(20px);
     z-index: 200;
     position: absolute;
-    right: 0;
+    right: -380px;
     top: 106px;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
     display: none;
 }
 .mobile-menu a {
-    margin-top: 15px;
     padding: 10px;
     display: block;
     text-decoration: none;
     font-size: 24px;
     color: #000;
 }
+.mobile-menu a:not(:first-child) {
+    margin-top: 1rem;
+}
+.mobile-menu .nav_buttons {
+    margin-top: 3rem;
+    align-self: center;
+}
+.mobile-menu .sign-in-btn {
+    color: #2B7FAF;
+}
 
 
 /*Media query*/
 @media screen and (max-width: 768px) {
-    header {
-        position: relative;
-    }
     .desktop_menu {
         display: none;
     }
@@ -111,8 +121,6 @@ nav {
     }
     .mobile-menu {
         display: flex;
-        justify-content: center;
-       text-align: center;
-        flex-direction: column;
+        
     }
 }

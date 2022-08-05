@@ -136,5 +136,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Add the LOGIN_REDIRECT_URL = 'home' and LOGOUT_REDIRECT_URL = 'home' to redirect to home after logging in
 
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = '/dashboard/'
+LOGOUT_REDIRECT_URL = 'home/'
