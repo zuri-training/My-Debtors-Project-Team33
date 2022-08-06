@@ -33,3 +33,7 @@ class DashboardView(ListView):
   #   context = super(HomeView, self).get_context_data(*args, **kwargs)
   #   context["school_list"] = school_list
   #   return context
+
+class CommentView(ListView):
+  model = Comment
+  template_name = ''
