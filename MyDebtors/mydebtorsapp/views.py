@@ -26,7 +26,7 @@ class HomeView(ListView):
   
 class DashboardView(ListView):
   model = Student
-  template_name = 'dashboard.html'
+  template_name = 'users/dashboard.html'
 
   # def get_context_data(self, *args, **kwargs):
   #   school_list = School.objects.all()

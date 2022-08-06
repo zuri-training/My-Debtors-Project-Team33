@@ -1,0 +1,46 @@
+{% extends 'partials/base.html' %}  
+{% load static %}
+
+{% block content %}
+    <main>
+        
+       <section class="sign-in-section">
+        <div class="container">
+            <div class="sign-in">
+                <div class="header-text">
+                <h3>Sign in</h3>
+                <p>see your growth and get consulting support</p>
+            </div>
+            <!-- google button  -->
+            <div class="google-button">
+                <img src="{% static 'icons8-google-48.png' %}" alt="">
+                <a href="#">Sign in with google</a>
+            </div>
+            <div class="alternative">
+              <p class="pseudo">or sign in with Email</p>
+            </div>
+            <!-- email form -->
+            <form action="" class="Email-form">
+              {% csrf_token %}
+              {{form.as_p}}
+              <label for="email">Email Address
+                <input type="email" placeholder="emailaddress .com" size="50" required>
+                </label>
+                <label for="password">Password
+                <input type="password" placeholder="***********" class="pass" size="50" required>
+                </label>
+                
+                <div class="remember-me">
+                    <label for="remember">
+                      <input type="checkbox" checked >Remember Me</label>
+                    <a>Forgot password?</a>
+                </div>
+             <button class="btn">Log in</button>
+            </div>
+            </form>
+            <img src="{% static 'undraw_my_password_re_ydq7.svg' %}" alt="undraw" class="svg">
+        </div>
+       </section> 
+    </main>
+{% endblock content %}
+

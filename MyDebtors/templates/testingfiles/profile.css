@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #E5E9EC;
+}
+.container1{
+    display: flex;
+    background-color: white;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 25px;
+    padding: 10px;
+    height: 200px;
+    border-radius: 20px;
+    line-height: 40px;
+}
+
+.img{
+    width: 89px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.details{
+    margin-left: 60px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h5{
+    font-size: 44px;
+    color: #CF3B3D;
+}
+
+pre{
+    font-size: 20px;
+    color: #575757;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.parents{
+    color: #CF3B3D;
+}
+
+.container2{
+    display: flex;
+}
+
+.left-box{
+    width: 700px;
+    background-color: white;
+    margin-top: 30px;
+    margin-left: 20px;
+    height: 550px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.h4{
+    font-size: 36px;
+    color: #003350;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.about{
+    font-size: 20px;
+    color: #575757;
+}
+
+.student-details{
+    font-size: 20px;
+    color: #CF3B3D;
+}
+
+.right-box{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 25px;
+    background-color: white;  
+    height: 550px;
+    padding: 30px;
+    border-radius: 20px;
+    width: 638px; 
+}
+
+.payment{
+    font-size: 36px;
+    color: #A62F31;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 7px;
+}
+
+table{
+    width: 100%;
+    
+}
+
+th, td{
+    padding: 5px;
+}
+
+.table-head{
+    font-size: 24px;
+    color: #CF3B3D;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+td{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.not-paid{
+    color: #D96264;
+}
+
+.debt{
+    font-size: 24px;
+    color: #CF3B3D;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.overall{
+    color: #CF3B3D;
+}
+
+.container3{
+    margin-top: 20px;
+    margin-left: 930px;
+    margin-bottom: 20px;
+}
+
+button{
+    width: 180px;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    margin: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.btn1{
+    background-color: #CF3B3D;
+    font-size: 16px;
+    color: white;
+
+}
+
+.btn2{
+    background-color: #00659F;
+    font-size: 16px;
+    color: white;
+}
