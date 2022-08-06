@@ -1,5 +1,6 @@
+{% extends 'partials/base.html' %}
 {% load static %}
-<!DOCTYPE>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,58 +15,52 @@
       rel="stylesheet"
     />
     <!-- STYLESHEET -->
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
-    <title>Sign in page</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>SignUp page</title>
   </head>
-  <body>
-     
-  
-    <header></header>
+  <body> {% endcomment %}
+   
+    {% block content %}
+    {% comment %} <header></header> {% endcomment %}
     <main>
         
        <section class="sign-in-section">
+        <!-- header link -->
         <div class="container">
+          <a href="#" class="have-account">Have an account?<span>sign in</span></a>
             <div class="sign-in">
                 <div class="header-text">
-                <h3>Sign in</h3>
-                <p>see your growth and get consulting support</p>
+                <h3>Create an Account</h3>
+                <a>Don't have an account? <span>create one</span></a>
             </div>
             <!-- google button  -->
             <div class="google-button">
-                <img src="" alt="">
-                <!-- icons8-google-48.png -->
-                <a href="#">Sign in with google</a>
+                <img src="{% static 'icons8-google-48.png' %}" alt="">
+                <a href="#">Sign up with google</a>
             </div>
             <div class="alternative">
-              <p class="pseudo">or sign in with Email</p>
+              <p class="pseudo">or sign up with </p>
             </div>
             <!-- email form -->
-            <!-- <form action="" class="Email-form">
+            <form action="" class="Email-form">
+              {% comment %} <label for="">Name of school<input type="text" placeholder="Bethel High School" size="50" required></label>
               <label for="email">Email Address
-                <input type="username" placeholder="emailaddress .com" size="50" required>
+                <input type="email" placeholder="emailaddress .com" size="50" required>
                 </label>
+                <label for="">CAC Registration Number<input type="text" placeholder="*** **** **** ****" size="50" required></label>
                 <label for="password">Password
                 <input type="password" placeholder="***********" class="pass" size="50" required>
-                </label>
+                </label> {% endcomment %}
+                {% csrf_token %}
+                {{form.as_p}}
                 
-                <div class="remember-me">
-                    <label for="remember">
-                      <input type="checkbox" checked >Remember Me</label>
-                    <a>Forgot password?</a>
-                </div>
-             <button class="btn">Log in</button>
+             <button class="btn">Create an Account</button>
             </div>
-            </form> -->
-            <form method="post" class="Email-form">
-              {% csrf_token %}
-              {{ form.as_p }}
-              <button class="btn">Log in</button>
             </form>
             <img src="{% static 'undraw_my_password_re_ydq7.svg' %}" alt="undraw" class="svg">
         </div>
        </section> 
     </main>
-    
- </body>
-</html>
+{% endblock content %}
+  {% comment %} </body>
+</html> {% endcomment %}

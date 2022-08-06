@@ -1,27 +1,7 @@
+{% extends 'partials/base.html' %}  
 {% load static %}
-<!DOCTYPE>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- GOOGGLE APIS -->
-    <!-- <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-     -->
-    <!-- GOOGLE FONT -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- STYLESHEET -->
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
-    <title>Sign in page</title>
-  </head>
-  <body>
-     
-  
-    <header></header>
+
+{% block content %}
     <main>
         
        <section class="sign-in-section">
@@ -33,17 +13,18 @@
             </div>
             <!-- google button  -->
             <div class="google-button">
-                <img src="" alt="">
-                <!-- icons8-google-48.png -->
+                <img src="{% static 'icons8-google-48.png' %}" alt="">
                 <a href="#">Sign in with google</a>
             </div>
             <div class="alternative">
               <p class="pseudo">or sign in with Email</p>
             </div>
             <!-- email form -->
-            <!-- <form action="" class="Email-form">
+            <form action="" class="Email-form">
+              {% csrf_token %}
+              {{form.as_p}}
               <label for="email">Email Address
-                <input type="username" placeholder="emailaddress .com" size="50" required>
+                <input type="email" placeholder="emailaddress .com" size="50" required>
                 </label>
                 <label for="password">Password
                 <input type="password" placeholder="***********" class="pass" size="50" required>
@@ -56,16 +37,10 @@
                 </div>
              <button class="btn">Log in</button>
             </div>
-            </form> -->
-            <form method="post" class="Email-form">
-              {% csrf_token %}
-              {{ form.as_p }}
-              <button class="btn">Log in</button>
             </form>
             <img src="{% static 'undraw_my_password_re_ydq7.svg' %}" alt="undraw" class="svg">
         </div>
        </section> 
     </main>
-    
- </body>
-</html>
+{% endblock content %}
+
