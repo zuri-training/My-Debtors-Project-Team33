@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=montserrat">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>Landing page</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
                 <div class="desktop_nav_links">
                     <a href="#">Home</a>
                     <a href="#">Blog</a>
-                    <a href="#">About Us</a>
+                    <a href="{% url 'about' %}">About Us</a>
                     <a href="#">Contact Us</a>
                 </div>
                 <div class="desktop_nav_buttons">
@@ -37,7 +38,7 @@
                     <a href="#">Home</a>
                     
     <a href="#">Blog</a>
-                    <a href="#">About Us</a>
+                    <a href="{% url 'about' %}">About Us</a>
                     <a href="#">Contact Us</a>
                 </div>
                 <div class="desktop_nav_buttons">
@@ -54,7 +55,7 @@
                 <div>
                     <a href="#">Home</a>
                     <a href="#">Blog</a>
-                    <a href="#">About Us</a>
+                    <a href="{% url 'about' %}">About Us</a>
                     <a href="#">Contact Us</a>
                 </div>
                     
@@ -65,9 +66,6 @@
                     </div>
             </nav>        
         </header>
-    
-    
-        <script src="{% static 'navbar.js' %}"></script>
         <div class="page">
     <main>
         <div class="con-1 section">
@@ -95,17 +93,17 @@
                 <h4>Why <span>Notify?</span></h4>
                 <div class="boxes">
                     <div class="box bottom-box">
-                        <img src="file-icon.png" alt="file icon">
+                        <img src="{% static 'file-icon.png' %}" alt="file icon">
                         <p id="para-1">Easy access to students records</p> <br> <br> 
                         <p>Get access to student profile with just a click</p>
                     </div>
                     <div class="box bottom-box">
-                        <img src="alarm-icon.png" alt="alarm icon">
+                        <img src="{% static 'alarm-icon.png' %}" alt="alarm icon">
                         <p id="para-1">Get notified on the latest updates</p> <br> <br>
                         <p>Notification immediately after new information are uploaded</p>
                     </div>
                     <div class="box bottom-box">
-                        <img src="radar-icon.png" alt="radar icon">
+                        <img src="{% static 'radar-icon.png' %}" alt="radar icon">
                         <p id="para-1">Track down students with pending payments</p> <br> <br>
                         <p>Post a student record to track down your pending payments</p>
                     </div>
@@ -120,12 +118,12 @@
                     <p id="par-2">Tracking pending payments <br> is more easier as you have access to <br> view and post on your dashboard</p>
                 </div>
                 <div class="img-one">
-                    <img id="img-1" src="data-img.svg" alt="">
+                    <img id="img-1" src="{% static 'data-img.svg' %}" alt="">
                 </div>
             </div>
             <div class="con-3-flex-2">
                 <div class="img-two">
-                    <img id="img-2" src="laptop-man.svg" alt="">
+                    <img id="img-2" src="{% static 'laptop-man.svg' %}" alt="">
                 </div>
                 <div class="text-two">
                     <p id="par-1" class="paragraph-1">Easy access to <br> student <br> financial information</p> <br>
@@ -185,5 +183,6 @@
         <p>Notify 2022,inc All right reserved.</p>
     </footer>
     </div>.
+    <script src="{% static 'navbar.js' %}"></script>
 </body>
 </html>

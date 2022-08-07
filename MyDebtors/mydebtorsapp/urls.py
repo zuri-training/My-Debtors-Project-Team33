@@ -2,7 +2,7 @@ from django.urls import path
 from schema_graph.views import Schema
 
 # Import views here to render pages
-from .views import HomeView, DashboardView, CommentView
+from .views import HomeView, DashboardView, CommentView, AboutView
 
 urlpatterns = [
   path("Schema/", Schema.as_view()),
@@ -10,4 +10,5 @@ urlpatterns = [
   # path("", PostView.as_view(), name='posts'),
   path("dashboard/", DashboardView.as_view(), name='dashboard'),
   path("comment/", CommentView.as_view(), name="comment"),
+  path("dashboard/about/", AboutView.as_view(), name="about"),
 ]
