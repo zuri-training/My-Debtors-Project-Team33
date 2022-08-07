@@ -15,7 +15,7 @@ from django.http import HttpResponseRedirect
 # Homepage View
 class HomeView(ListView):
   model = School
-  template_name = 'navbar.html'
+  template_name = 'partials/navbar.html'
 
   # def get_context_data(self, *args, **kwargs):
   #   school_list = School.objects.all()
