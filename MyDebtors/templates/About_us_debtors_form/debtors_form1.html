@@ -1,0 +1,76 @@
+<!--This is the about us page designed and coded by Team 33-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/debtors_form.css">
+    <title>Dashboard</title>
+</head>
+<!--Body containing all the codes displayed on the webpage-->
+<body>
+    <!--This is a div having a class="head" the head contains the notify logo and the Icon(bell icon, seting icon and the user-profile icon)-->
+    <div class="head">
+        <div class="notify-logo">
+            <img src="img/Frame 64.png" alt="notify-logo">
+        </div>
+        <div class="other-logo">
+            <img src="img/Bell_pin.png" alt="Notification">
+            <img src="img/Setting_line.png" alt="Settings">
+            <img src="img/User_box.png" alt="User-Profile">
+        </div>
+    </div>
+    <!--This is a div holding the major content of the webpage from the side panel to the basic details and other information-->
+        <div class="body-of-dashboard">
+            
+            <div class="side-panel">
+                
+                <!--This is the image for everythng on the side panel and image area wasn't really working so I am leaving it out <img src="img/Frame 148.png" alt="Side-Panel"> -->
+                <a href="#"><img src="img/Frame 69.png" alt="Dashboard menu" id="dashboard-menu"></a>
+                <a href="#"><img src="img/Frame 71.png" alt="Debtors menu" id="other-menu-aside-dashboard"></a>
+                <a href="#"><img src="img/Frame 155.png" alt="Message Menu" id = "other-menu-aside-dashboard"></a>
+                <a href="#"><img src="img/Frame 70.png" alt="Profile Menu" id="other-menu-aside-dashboard"></a>
+            </div>
+            <div class="basic-details">
+                    <div class="head">
+                        <h1>Edit Basic Details</h1>                
+                    </div>
+                    <div class="forms">
+                        <form action="#" target="_blank" method="post" autocomplete="on">
+                            <label for="name">Full Name</label><br>
+                            <input type="text" name="name" id="name" required><br><br>
+                            <label for="school">School</label><br>
+                            <input type="text" name="school" id="school" required><br><br>
+                            <label for="gender">Gender</label><br>
+                            <select>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">others</option>
+                            </select><br><br>
+                            <label for="DOB">Date Of Birth</label><br>
+                            <input type="date" name="DOB" id="DOB">
+                        </form>
+                        <div>
+                        <form action="acition.html" target="_blank" method="post">
+                            <label for="pname">Parent Name</label><br>
+                            <input type="text" name="pname" id="pname" required><br><br>
+                            <label for="SID">Student ID</label><br>
+                            <input type="text" name="SID" id="SID" required><br><br>
+                            <label for="tel">Phone Number</label><br>
+                            <input type="tel" name="tel" id="tel" required><br><br>
+                            <label for="addr">Address</label><br>
+                            <input type="text" name="addr" id="addr" required>
+                        </form>
+
+                    </div>
+                    </div>
+                    <div class="basic-detail-body-button" onclick="submit()">
+                        <strong>1/2</strong>
+                        <button class="next">Next</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

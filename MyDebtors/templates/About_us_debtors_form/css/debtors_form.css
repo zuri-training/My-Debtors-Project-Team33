@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background: white;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 30px;
+}
+.other-logo img{
+    margin-left: 30px;
+}
+.other-logo img:hover{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+.body-of-dashboard{
+    display: grid;
+    grid-template-columns: 170px auto;
+    margin-top: 25px;
+    
+}
+.side-panel{
+    
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+}
+.side-panel img{
+    margin-top: 7px;
+    padding: 3px;
+}
+.basic-details{
+    background-color:#E5E9EC;
+     /* rgb(173, 172, 172); */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px -100px 5px;
+    padding: 10px;
+    
+}
+.forms{
+    
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.basic-detail-body-button{
+    /* margin: 5px; */
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 40px;
+    padding: 5px;
+      
+    
+}
+.basic-detail-body-button button{
+background-color: rgb(29, 119, 253);
+align-self: flex-end;
+border: none;
+cursor: pointer;
+text-align: center;
+padding: 5px 10px;
+}
+
+input{
+    width: 50%;
+    height: 40px;
+    outline: 0;
+    border: 0;
+}
