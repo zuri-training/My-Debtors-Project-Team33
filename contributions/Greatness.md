@@ -6,4 +6,6 @@
 
 3. [Forget password Verification](https://github.com/zuri-training/My-Debtors-Project-Team33/blob/master/MyDebtors/templates/users/forget_password2.html)
 
-4. []()
+4. [Reset Password](https://github.com/zuri-training/My-Debtors-Project-Team33/blob/master/MyDebtors/templates/users/reset.html)
+
+5. [Forget password/CSS]()
