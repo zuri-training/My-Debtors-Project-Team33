@@ -15,7 +15,7 @@ from django.http import HttpResponseRedirect
 # Homepage View
 class HomeView(ListView):
   model = School
-  template_name = 'partials/index.html'
+  template_name = 'partials/home.html'
 
   # def get_context_data(self, *args, **kwargs):
   #   school_list = School.objects.all()
@@ -39,5 +39,10 @@ class CommentView(ListView):
   template_name = ''
 
 
-class AboutView(View):
-  template_name = 'AboutUs/aboutus.html'
+# class AboutView(View):
+#   template_name = 'AboutUs/aboutus.html'
+
+
+def aboutPage(request):
+  reverse_lazy('home')
+  return render(request, 'AboutUs/aboutus.html')

@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Us</title>
-        <link rel="stylesheet" href="/aboutus.css">
-    </head>
-    <body>
-        <div class="container_1">
-            <div class="mission_img">
-               <img src="/image 5.png" alt="Our Mission"> 
-            </div>
-            <div class="story">
-                <h4><span class="text2">Our Story</span></h4><br>
-                <pre class="p2">Notify is the first online “Debt Tracker for 
+{% extends 'partials/index.html' %} {% load static %}
+{% block content%}
+<div class="container_1">
+  <div class="mission_img">
+    <img src="{% static 'image-5.png' %}" alt="Our Mission" />
+  </div>
+  <div class="story">
+    <h4><span class="text2">Our Story</span></h4>
+    <br />
+    <pre class="p2">
+Notify is the first online “Debt Tracker for 
 schools” app in West Africa. We first launched on
 the 1st of January 2022 .
 
@@ -27,19 +21,21 @@ simplicity and transparency.
                     
 Notify is on a mission 'to give every school the
 power to better track their debtors and manage
-their finances', and we intend to be the best.</pre>
-            </div>
-            
-        </div>
-        <div class="container_2">
-            <div class="mission">
-                <h4> <span class="text">Our Mission</span></h4><br>
-                <p class="p1">To give Schools the power to better track <br> their debtors and manage their finances</p>
-            </div>
-            <div class="story_img">
-                <img src="/bro.svg" alt="Our Story">
-            </div>
-
-        </div>
-    </body>
-</html>
+their finances', and we intend to be the best.</pre
+    >
+  </div>
+</div>
+<div class="container_2">
+  <div class="mission">
+    <h4><span class="text">Our Mission</span></h4>
+    <br />
+    <p class="p1">
+      To give Schools the power to better track <br />
+      their debtors and manage their finances
+    </p>
+  </div>
+  <div class="story_img">
+    <img src="{% static 'bro.svg' %}" alt="Our Story" />
+  </div>
+</div>
+{% endblock %}
