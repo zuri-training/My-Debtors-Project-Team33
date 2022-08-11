@@ -16,7 +16,7 @@ from .forms import StudentForm
 # Homepage View
 class HomeView(ListView):
   model = School
-  template_name = 'partials/index.html'
+  template_name = 'partials/home.html'
 
   # def get_context_data(self, *args, **kwargs):
   #   school_list = School.objects.all()
@@ -40,8 +40,8 @@ class CommentView(ListView):
   template_name = ''
 
 
-class AboutView(View):
-  template_name = 'AboutUs/aboutus.html'
+# class AboutView(View):
+#   template_name = 'AboutUs/aboutus.html'
 
 
 def debtors_form(request):
@@ -57,3 +57,12 @@ def debtors_form(request):
     'form' : form 
   }
   return render(request, 'about_us_debtors_form/debtors_form1.html', context)
+
+# class AboutView(View):
+#   template_name = 'AboutUs/aboutus.html'
+
+
+def aboutPage(request):
+  reverse_lazy('home')
+  return render(request, 'AboutUs/aboutus.html')
+

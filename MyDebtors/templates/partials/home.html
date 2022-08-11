@@ -1,0 +1,124 @@
+{% extends 'partials/index.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<main>
+  <div class="con-1 section">
+  <h4>Track your School <br> Debtors</h4> <br> <br>
+  <p>Keep records and <br> check school debtors at <br> a go with <span id="blue-text">Notify</span></p> <br>
+  <button id="top-btn">Explore</button>
+  </div>
+  <div class="con-4 section">
+  
+      <div class="con-4-flex">
+          <div class="box top-box">
+              <p class="con-4-para"><span>120</span></p> <br> 
+              <p>Registered schools</p>
+          </div>
+          <div class="box top-box">
+              <p class="con-4-para"><span id="span1">80</span></p> <br>
+              <p>Approved schools</p>
+          </div>
+          <div class="box top-box">
+              <p class="con-4-para">1200+</p> <br>
+              <p>Info uploaded</p>
+          </div>
+      </div>
+      <div class="con-2 section">
+          <h4>Why <span>Notify?</span></h4>
+          <div class="boxes">
+              <div class="box bottom-box">
+                  <img src="{% static 'file-icon.png' %}" alt="file icon">
+                  <p id="para-1">Easy access to students records</p> <br> <br> 
+                  <p>Get access to student profile with just a click</p>
+              </div>
+              <div class="box bottom-box">
+                  <img src="{% static 'alarm-icon.png' %}" alt="alarm icon">
+                  <p id="para-1">Get notified on the latest updates</p> <br> <br>
+                  <p>Notification immediately after new information are uploaded</p>
+              </div>
+              <div class="box bottom-box">
+                  <img src="{% static 'radar-icon.png' %}" alt="radar icon">
+                  <p id="para-1">Track down students with pending payments</p> <br> <br>
+                  <p>Post a student record to track down your pending payments</p>
+              </div>
+          </div>
+
+      </div>
+  <div class="con-3 container-3 section">
+      <h4>What we offer</h4>
+      <div class="con-3-flex-1">
+          <div class="text-one">
+              <p id="par-1" class="paragraph-1">Dashboard navigation for schools</p> <br> 
+              <p id="par-2">Tracking pending payments <br> is more easier as you have access to <br> view and post on your dashboard</p>
+          </div>
+          <div class="img-one">
+              <img id="img-1" src="{% static 'data-img.svg' %}" alt="">
+          </div>
+      </div>
+      <div class="con-3-flex-2">
+          <div class="img-two">
+              <img id="img-2" src="{% static 'laptop-man.svg' %}" alt="">
+          </div>
+          <div class="text-two">
+              <p id="par-1" class="paragraph-1">Easy access to <br> student <br> financial information</p> <br>
+              <p id="par-3" class="paragraph-2">Knowing the financial <br> status of students you are <br> about enrolling in your school</p>
+          </div>
+      </div>
+  </div>
+  
+  </div>
+  <div class="con-5 section">
+      <p>Need more information <br> about your student?</p> <br> 
+      <input id="inp" type="text" size="13" placeholder="  abc@gmail.com"><button id="btn-1" type="submit">Subscribe</button>
+  </div>
+  <div class="con-6 section">
+      <img src="logo.png" alt="">
+      <div class="list">
+          <div class="unordered-list">
+              <ul>
+                  <li>Navigation</li> <br>
+                  <li>Home</li><br>
+                  <li>Product</li><br>
+                  <li>Profile</li><br>
+                  <li>Contact</li>
+              </ul>
+          </div>
+          <div class="unordered-list">
+              <ul>
+                  <li>About us</li><br>
+                  <li>Our story</li><br>
+                  <li>Designers</li><br>
+                  <li>Press</li><br>
+                  <li>Sustainability</li>
+                  
+              </ul>
+          </div>
+          <div class="unordered-list">
+              <ul>
+                  <li>Support</li><br>
+                  <li>FAQ</li><br>
+                  <li>Care guide</li><br>
+                  <li>Info</li><br>
+                  <li>Warrant</li>
+              </ul>
+          </div>
+          <div class="unordered-list">
+              <ul>
+                  <li>Contact us</li><br>
+                  <li>+12-234-345</li><br>
+                  <li>+23-567-678</li><br>
+                  <li>Hello@notify.com</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</main>
+<footer class="footer-class section">
+  <p>Notify 2022,inc All right reserved.</p>
+</footer>
+</div>.
+
+{% endblock %}
