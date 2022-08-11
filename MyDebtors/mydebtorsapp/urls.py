@@ -11,16 +11,19 @@ from .views import HomeView, DashboardView, CommentView, aboutPage, contactUsVie
 
 
 urlpatterns = [
-  path("Schema/", Schema.as_view()),
-  path("", HomeView.as_view(), name='home'),
-  # path("", PostView.as_view(), name='posts'),
-  path("dashboard/", DashboardView.as_view(), name='dashboard'),
-  path("comment/", CommentView.as_view(), name="comment"),
+    path("Schema/", Schema.as_view()),
+    path("", HomeView.as_view(), name='home'),
+    # path("", PostView.as_view(), name='posts'),
+    path("dashboard/", DashboardView.as_view(), name='dashboard'),
+    path("comment/", CommentView.as_view(), name="comment"),
 
- 
-  path("dashboard/about_debtors/", views.debtors_form, name="about_debtors"),
 
-  path("about/", aboutPage, name="about"),
-  path("blog/", blogView, name='blog'),
-  path("contact-us/", contactUsView, name='contact-us')
+    path("dashboard/about_debtors/", views.debtors_form, name="about_debtors"),
+
+    path("about/", aboutPage, name="about"),
+    path("blog/", blogView, name='blog'),
+    path("contact-us/", contactUsView, name='contact-us'),
+    path("individual/debtor/<int:pk>/",
+         views.debtor_details, name="individual-debtor"),
+    path("directory/", views.directory_page, name="directory"),
 ]
