@@ -6,7 +6,7 @@ from schema_graph.views import Schema
 # from .views import HomeView, DashboardView, CommentView, AboutView
 from . import views
 
-from .views import HomeView, DashboardView, CommentView, aboutPage
+from .views import HomeView, DashboardView, CommentView, aboutPage, contactUsView, blogView
 # from . import views
 
 
@@ -21,5 +21,6 @@ urlpatterns = [
   path("dashboard/about_debtors/", views.debtors_form, name="about_debtors"),
 
   path("about/", aboutPage, name="about"),
-
+  path("blog/", blogView, name='blog'),
+  path("contact-us/", contactUsView, name='contact-us')
 ]

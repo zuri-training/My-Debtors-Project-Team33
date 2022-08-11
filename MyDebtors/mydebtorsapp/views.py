@@ -66,3 +66,10 @@ def aboutPage(request):
   reverse_lazy('home')
   return render(request, 'AboutUs/aboutus.html')
 
+
+def blogView(request):
+  return render(request, 'blog-page/blog.html')
+
+
+def contactUsView(request):
+  return render(request, 'contact-us-page/contactus.html')

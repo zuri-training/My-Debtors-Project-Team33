@@ -1,13 +1,7 @@
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact us</title>
-        <link rel="stylesheet" href="/contactus.css">
-    </head>
-    <body>
-        <header>
+{% extends 'partials/index.html' %}
+{% load static %}
+{% block content %}
+        <!-- <header>
             <nav>
                 <ul class="list">
                     <li>Home</li>
@@ -17,10 +11,10 @@
                 </ul>
             </nav>
             <button class="btn">Log in</button>
-        </header>
+        </header> -->
         <main>
             <div>
-                <img class="image" src="/contact.png" alt="contact us">
+                <img class="image" src="{% static 'contact.png'%}" alt="contact us">
             </div>
             <div class="container">
                 <div class="form">
@@ -39,19 +33,18 @@
                     <button class="btn2">Summit</button>
                 </div>
                 <div class="contact_details">
-                    <img class="location" src="/location.png" alt="location logo">
+                    <img class="location" src="{% static 'location.png' %}" alt="location logo">
                     <h2>Address</h2>
                     <p>2972 wesheimer Rd. Santa Ana,</p>
                     <p>illinois 85486</p><br>
-                    <img src="/phone logo.png" alt="Phone logo">
+                    <img src="{% static 'phone logo.png'%}" alt="Phone logo">
                     <h2>Phone</h2>
                     <p><span>(+234)</span> 901-000-0000</p>
                     <p><span>(+234)</span> 901-000-0000</p><br>
-                    <img src="/gmail.png" alt="Email logo"><br>
+                    <img src="{% static 'gmail.png'%}" alt="Email logo"><br>
                     <h2>Email</h2>
                     <a href="#">Mydeptor@gmail.com</a>
                 </div>
             </div>
         </main>
-    </body>
-</html>
+{% endblock %}

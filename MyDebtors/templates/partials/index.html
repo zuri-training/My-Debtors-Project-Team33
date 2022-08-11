@@ -8,21 +8,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=montserrat">
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="{% static 'aboutPage.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- STYLESHEET -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="{% static 'blog.css' %}">
     <title>Landing page</title>
 </head>
 <body>
         <header>
             <div class="logo_box">
-                <a href="#">
+                <a href="{% url 'home' %}">
                     <img src="{% static 'logo.png' %}" alt="Notify logo">
                 </a>  
             </div>
             <div class="desktop_menu">
                 <div class="desktop_nav_links">
-                    <a href="#">Home</a>
-                    <a href="#">Blog</a>
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'blog' %}">Blog</a>
                     <a href="{% url 'about' %}">About Us</a>
-                    <a href="#">Contact Us</a>
+                    <a href="{% url 'contact-us' %}">Contact Us</a>
                 </div>
                 <div class="desktop_nav_buttons">
                     <a href="{% url 'login' %}" class="btn_navbar sign-in-btn">Sign In</a>
@@ -38,9 +46,9 @@
                 <div>
                     <a href="{% url 'home' %}">Home</a>
                     
-    <a href="#">Blog</a>
+    <a href="{% url 'blog' %}">Blog</a>
                     <a href="{% url 'about' %}">About Us</a>
-                    <a href="#">Contact Us</a>
+                    <a href="{% url 'contact-us' %}">Contact Us</a>
                 </div>
                 <div class="desktop_nav_buttons">
                     <a href="{% url 'login' %}" class="btn_navbar sign-in-btn">Sign In</a>
@@ -54,23 +62,27 @@
             </div>
             <nav class="mobile-menu" id="mobile-menu">
                 <div>
-                    <a href="#">Home</a>
-                    <a href="#">Blog</a>
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'blog' %}">Blog</a>
                     <a href="{% url 'about' %}">About Us</a>
-                    <a href="#">Contact Us</a>
+                    <a href="{% url 'contact-us' %}">Contact Us</a>
                 </div>
                     
     
                     <div class="nav_buttons">
-                        <a href="#" class="btn_navbar sign-in-btn">Sign In</a>
-                        <a href="#" class="btn_navbar sign-up-btn">Sign Up</a>
+                        <a href="{% url 'login' %}" class="btn_navbar sign-in-btn">Sign In</a>
+                        <a href="{% url 'register' %}" class="btn_navbar sign-up-btn">Sign Up</a>
                     </div>
             </nav>        
         </header>
         <div class="page">
             {% block content %}
             {% endblock %}
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     
     <script src="{% static 'navbar.js' %}"></script>
+    <script src="{% static 'blog.js' %}"></script>
 </body>
 </html>
