@@ -75,12 +75,14 @@ def blogView(request):
 
 def contactUsView(request):
   return render(request, 'contact-us-page/contactus.html')
-  def debtor_details(request, pk):
-    student = Student.objects.get(id=pk)
-    context = {
-      'student':student,
-    }
-    return render(request, 'About_us_debtors_form/about_us_individual.html', context)
+
+
+def debtor_details(request, pk):
+  student = Student.objects.get(id=pk)
+  context = {
+    'student':student,
+  }
+  return render(request, 'About_us_debtors_form/about_us_individual.html', context)
 
 def directory_page(request):
   students = Student.objects.all()
