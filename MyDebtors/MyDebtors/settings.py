@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'schema_graph',
     'users',
     'mydebtorsapp',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +73,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'MyDebtors.wsgi.application'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 # Database

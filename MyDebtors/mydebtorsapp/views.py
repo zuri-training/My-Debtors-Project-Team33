@@ -1,5 +1,5 @@
 from multiprocessing import context
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 # import views here
 from django.views.generic import ListView, View
@@ -8,6 +8,7 @@ from django.views.generic import ListView, View
 from .models import School, Student, Comment
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
+from .forms import StudentForm
 
 
 # Create your views here.
@@ -41,3 +42,18 @@ class CommentView(ListView):
 
 class AboutView(View):
   template_name = 'AboutUs/aboutus.html'
+
+
+def debtors_form(request):
+  if request.method == "POST":
+    form = StudentForm(request.POST)
+    if form.is_valid():
+      form.save()
+      return redirect('about_debtors')
+  else:
+    form = StudentForm()
+  
+  context = {
+    'form' : form 
+  }
+  return render(request, 'about_us_debtors_form/debtors_form1.html', context)
