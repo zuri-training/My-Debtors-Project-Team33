@@ -1,4 +1,4 @@
--[sign up page](https://github.com/zuri-training/My-Debtors-Project-Team33/blob/master/MyDebtors/templates/users/sign-up.html)
+-[contribution one](https://github.com/zuri-training/My-Debtors-Project-Team33/commit/0c093d571493150266c88f49e46dd74c56ef4c2c)
 
 
--[sign-in-page](https://github.com/zuri-training/My-Debtors-Project-Team33/blob/master/MyDebtors/templates/users/sign-in.html)
+-[contribution two](https://github.com/zuri-training/My-Debtors-Project-Team33/commit/0c093d571493150266c88f49e46dd74c56ef4c2c) ---I worked on the sign-up and sign in page
