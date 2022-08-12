@@ -1,11 +1,13 @@
 <!--This is the about us page designed and coded by Team 33-->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/about_us_individual.css">
+    {% comment %} <link rel="stylesheet" type="text/css" href="css/"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'about_us_individual.css' %}">
     <title>Dashboard</title>
 </head>
 <!--Body containing all the codes displayed on the webpage-->
@@ -13,12 +15,12 @@
     <!--This is a div having a class="head" the head contains the notify logo and the Icon(bell icon, seting icon and the user-profile icon)-->
     <div class="head">
         <div class="notify-logo">
-            <img src="img/Frame 64.png" alt="notify-logo">
+            <img src="{% static 'logo.png' %}" alt="notify-logo">
         </div>
         <div class="other-logo">
-            <img src="img/Bell_pin.png" alt="Notification">
-            <img src="img/Setting_line.png" alt="Settings">
-            <img src="img/User_box.png" alt="User-Profile">
+            <img src="{% static 'Bell_pin.png' %}" alt="Notification">
+            <img src="{% static 'Setting_line.png' %}" alt="Settings">
+            <img src="{% static 'User_box.png' %}" alt="User-Profile">
         </div>
     </div>
     <!--This is a div holding the major content of the webpage from the side panel to the basic details and other information-->
@@ -27,15 +29,15 @@
             <div class="side-panel">
                 
                 <!--This is the image for everythng on the side panel and image area wasn't really working so I am leaving it out <img src="img/Frame 148.png" alt="Side-Panel"> -->
-                <a href="#"><img src="img/Frame 69.png" alt="Dashboard menu" id="dashboard-menu"></a>
-                <a href="#"><img src="img/Frame 71.png" alt="Debtors menu" id="other-menu-aside-dashboard"></a>
-                <a href="#"><img src="img/Frame 155.png" alt="Message Menu" id = "other-menu-aside-dashboard"></a>
-                <a href="#"><img src="img/Frame 70.png" alt="Profile Menu" id="other-menu-aside-dashboard"></a>
+                <a href="#"><img src="{% static 'Frame 69.png' %}" alt="Dashboard menu" id="dashboard-menu"></a>
+                <a href="#"><img src="{% static 'Frame 71.png' %}" alt="Debtors menu" id="other-menu-aside-dashboard"></a>
+                <a href="#"><img src="{% static 'Frame 155.png' %}" alt="Message Menu" id = "other-menu-aside-dashboard"></a>
+                <a href="#"><img src="{% static 'Frame 70.png' %}" alt="Profile Menu" id="other-menu-aside-dashboard"></a>
             </div>
             <div class="basic-details">
                 <div class="basic-details-upper">
                     <div class="basic-detail-profile-picture">
-                        <img src="img/Ellipse 66.png" alt="User-Profile-Picture">
+                        <img src="{% static 'Ellipse 66.png' %}" alt="User-Profile-Picture">
                     </div>
                     <div class="basic-detail-basic-details">
                         <div class="basic-detail-head">
@@ -46,10 +48,10 @@
                             <strong>
                                 
                                 <span class="a"><h3>Full Name: </h3>
-                                    <h4>Ane Cooper</h4>
+                                    <h4>{{student.first_name}} - {{student.last_name}}</h4>
                                 </span>
                                 <span class="b"><h3>Phone Number: </h3>
-                                    <h4>+2349057478099</h4>
+                                    <h4>{{student.parent_phone_no}}</h4>
                                 </span>
                                 <span class="c"><h3>Gender: </h3>
                                     <h4>Female</h4>
@@ -61,10 +63,10 @@
                                     <h4>16th October 2003</h4>
                                 </span>
                                 <span class="f"><h3>Parents: </h3>
-                                    <h4>Mr and Mrs. Cooper</h4>
+                                    <h4>Mr and Mrs. {{student.parent_name}}</h4>
                                 </span>
                                 <span class="g"><h3>Student ID: </h3>
-                                    <h4>Lag45678922</h4>
+                                    <h4>{{student.admission_no}}</h4>
                                 </span>
                             </strong>
                         </div>
@@ -73,10 +75,10 @@
                 <div class="basic-detail-body">
                     <div class="basic-detail-body-first">
                         <div class="basic-detail-body-head">
-                            <h1>About Ane</h1>
+                            <h1>About {{student.first_name}} {{student.last_name}}</h1>
                         </div>
                         <div class="basic-detail-body-body">
-                            <p>Ane Cooper, a Class 3 Science student, has been attending 
+                            <p>{{student.first_name}} {{student.last_name}}, a Class 3 Science student, has been attending 
                                 this school for a little over two years now. Her academic records are on the average side, and she has so far, posed no threat to the school.
                                 However, she has an outstanding school fees debt for the first term in the 2020 school session. 
                                 Before now, she has been able to meet up with all payments concerning school fees and other fees 

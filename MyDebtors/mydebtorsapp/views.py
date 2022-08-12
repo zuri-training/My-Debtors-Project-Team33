@@ -9,6 +9,7 @@ from .models import School, Student, Comment
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from .forms import StudentForm
+from django.contrib import messages
 
 
 # Create your views here.
@@ -49,6 +50,8 @@ def debtors_form(request):
     form = StudentForm(request.POST)
     if form.is_valid():
       form.save()
+      student_name = form.cleaned_data.get('first_name')
+      messages.success(request, f'{student_name} has been added Successfuly')
       return redirect('about_debtors')
   else:
     form = StudentForm()
@@ -66,3 +69,17 @@ def aboutPage(request):
   reverse_lazy('home')
   return render(request, 'AboutUs/aboutus.html')
 
+
+def debtor_details(request, pk):
+  student = Student.objects.get(id=pk)
+  context = {
+    'student':student,
+  }
+  return render(request, 'About_us_debtors_form/about_us_individual.html', context)
+
+def directory_page(request):
+  students = Student.objects.all()
+  context = {
+    'students': students 
+  }
+  return render(request, 'debtors_directory/directory.html', context)

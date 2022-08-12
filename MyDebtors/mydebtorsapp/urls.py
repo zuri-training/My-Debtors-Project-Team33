@@ -21,5 +21,7 @@ urlpatterns = [
   path("dashboard/about_debtors/", views.debtors_form, name="about_debtors"),
 
   path("about/", aboutPage, name="about"),
+  path("individual/debtor/<int:pk>/", views.debtor_details, name="individual-debtor"),
+  path("directory/", views.directory_page, name="directory"),
 
 ]

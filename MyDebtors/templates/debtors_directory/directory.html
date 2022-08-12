@@ -1,15 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dir_style.css">
+    <link rel="stylesheet" href="{% static 'dir_style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>Debtor's Direcory</title>
 </head>
 <body>
     <div class="head">
-       <a href="homepage"> <img src="Frame 64logo.png"></a>
+       <a href="homepage"> <img src="{% static 'logo.png' %}"></a>
        
        <div>
         <a href="notificationn"> <img src="Bell_pinbell.svg" ></a>
@@ -39,7 +41,7 @@
             </form>   
         </div>
         <div class="add">
-            <button> Add Debtors</button>
+            <a href="{% url 'about_debtors' %}" class="btn btn-link">Add Debtors</a>
             <div class="content"> 
     </div>
          </div>
@@ -47,47 +49,24 @@
             <div class="names">
                 <table>
                     <tr id="debtors detail">
-                        <th colspan="1" class="pro" id="top">Name </th>
-                        <th colspan="1">Descripton</th>
-                        <th colspan="1">Status</th>
-                        <th colspan="1"></th>
+                        <th>S/N</th>
+                        <th colspan="1">image</th>
+                        <th colspan="1" class="pro" id="top">FullName </th>
+                        <th colspan="1">Last School</th>
+                        <th colspan="1">Amount Owned</th>
+                        <th colspan="1">Details</th>
                     </tr>
+                    {% for student in students %}
                     <tr>
-                        <th class="pro"><img src="face.svg">Ane cooper </th>
-                        <th>Female, Primary 3</th>
-                        <th>Ex-student, owing 2020</th>
-                        <th><a href="view" class="view">View</a>
+                        <th>{{forloop.counter}}</th>
+                        <th><img src="face.svg"></th>
+                        <th class="pro">{{student.first_name}} {{student.last_name}} </th>
+                        <th>{{student.last_school}}</th>
+                        <th>{{student.fees_owed}}</th>
+                        <th><a href="{% url 'individual-debtor' student.id %}" class="view">View</a>
                     </tr>
-                    <tr>
-                         <th class="pro"> <img src="face.svg">Ane cooper </th>
-                        <th>Female, Primary 3</th>
-                        <th>Ex-student, owing 2020</th>
-                        <th><a href="view" class="view">View</a>
-                    </tr>
-                    <tr>
-                        <th class="pro"> <img src="face.svg">Ane cooper </th>
-                        <th>Female, Primary 3</th>
-                        <th>Ex-student, owing 2020</th>
-                        <th><a href="view" class="view">View</a>
-                    </tr>
-                    <tr>
-                        <th class="pro"> <img src="face.svg">Ane cooper </th>
-                        <th>Female, Primary 3</th>
-                        <th>Ex-student, owing 2020</th>
-                        <th><a href="view" class="view">View</a>
-                    </tr>
-                     <tr>
-                        <th class="pro"> <img src="face.svg">Ane cooper </th>
-                        <th>Female, Primary 3</th>
-                        <th>Ex-student, owing 2020</th>
-                        <th><a href="view" class="view">View</a>
-                    </tr>
-                    <tr>
-                        <th class="pro"> <img src="face.svg">Ane cooper </th>
-                        <th>Female, Primary 3</th>
-                        <th>Ex-student, owing 2020</th>
-                        <th><a href="view" class="view">View</a>
-                    </tr>
+                    {% endfor %}
+
                 </table>
          </div>
         </div>
