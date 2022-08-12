@@ -50,10 +50,14 @@
                     <a href="{% url 'about' %}">About Us</a>
                     <a href="{% url 'contact-us' %}">Contact Us</a>
                 </div>
+                {% if user.is_authenticated %}
+                <div></div>
+                {% else %}
                 <div class="desktop_nav_buttons">
                     <a href="{% url 'login' %}" class="btn_navbar sign-in-btn">Sign In</a>
                     <a href="{% url 'register' %}" class="btn_navbar sign-up-btn">Sign Up</a>
                 </div>
+                {% endif %}
             </div>
             <div class="sidebar_hamburger_menu" id="harmburger">
                 <span></span>

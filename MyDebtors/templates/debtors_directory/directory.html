@@ -14,16 +14,16 @@
        <a href="homepage"> <img src="{% static 'logo.png' %}"></a>
        
        <div>
-        <a href="notificationn"> <img src="Bell_pinbell.svg" ></a>
-        <a href="settings"> <img src="Setting_linesettings.svg" ></a>
-        <a href="profile"> <img src="User_box.svg" ></a>
+        <a href="notificationn"> <img src="{% static 'Bell_pinbell.svg' %}" ></a>
+        <a href="settings"> <img src="{% static 'Setting_linesettings.svg' %}" ></a>
+        <a href="profile"> <img src="{% static 'User_box.svg' %}" ></a>
        </div>
     </div>
     <div class="bar">
-        <a href="dashboard"> <img src="Frame 148dashboard.svg" ></a>
-        <a href="debtor"> <img src="debtors.svg" ></a>
-        <a href="message"> <img src="message.svg" ></a>
-        <a href="profile"> <img src="profile.svg" ></a>
+        <a href="dashboard"> <img src="{% static 'Frame 148dashboard.svg' %}" ></a>
+        <a href="debtor"> <img src="{% static 'debtors.svg' %}" ></a>
+        <a href="message"> <img src="{% static 'message.svg' %}" ></a>
+        <a href="profile"> <img src="{% static 'profile.svg' %}" ></a>
     </div>
 <div class="container">
     <div class="bar2">
@@ -59,7 +59,7 @@
                     {% for student in students %}
                     <tr>
                         <th>{{forloop.counter}}</th>
-                        <th><img src="face.svg"></th>
+                        <th><img src="{% static 'face.svg' %}"></th>
                         <th class="pro">{{student.first_name}} {{student.last_name}} </th>
                         <th>{{student.last_school}}</th>
                         <th>{{student.fees_owed}}</th>
